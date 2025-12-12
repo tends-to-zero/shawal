@@ -1,12 +1,15 @@
 import Button from '@/components/Button';
-import { Menu, X } from 'lucide-react';
-import {motion, AnimatePresence} from 'motion/react'
+import { Menu, Moon, Sun, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react';
+import { Switch } from './ui/switch';
+import { useTheme } from './theme-provider';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const {theme, setTheme} = useTheme();
   return (
-    <motion.div 
+    <motion.div
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1 }}
@@ -20,14 +23,19 @@ const Navbar = () => {
           <li className='cursor-pointer hover:border-b-2'>CP Stats</li>
           <li className='cursor-pointer hover:border-b-2'>Contact</li>
         </ul>
-        <Button text = "Get in touch" className="px-5 py-2 bg-foreground/5 backdrop-blur-3xl border"/>
+        <Button text="Get in touch" className="px-5 py-2 bg-foreground/5 backdrop-blur-3xl border" />
+        <div className='flex gap-2 items-center'>
+          <Sun />
+          <Switch checked={theme == 'dark'} onCheckedChange={(checked) => (setTheme(checked ? "dark" : "light"))} />
+          <Moon />
+        </div>
       </div>
       <div className='md:hidden cursor-pointer' onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <X /> : <Menu />}
       </div>
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -40,7 +48,12 @@ const Navbar = () => {
               <li>CP Stats</li>
               <li>Contact</li>
             </ul>
-            <Button text = "Get in touch" className="px-5 py-2 bg-foreground/5 backdrop-blur-3xl border"/>
+            <Button text="Get in touch" className="px-5 py-2 bg-foreground/5 backdrop-blur-3xl border" />
+            <div className='flex gap-2 items-center'>
+              <Sun size={20} />
+              <Switch checked={theme == 'dark'} onCheckedChange={(checked) => (setTheme(checked ? "dark" : "light"))} />
+              <Moon size={20} />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
