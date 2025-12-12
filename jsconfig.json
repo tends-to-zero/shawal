@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",          // Base directory
+    "paths": {
+      "@/*": ["src/*"]       // Alias for src folder
+    },
+    "jsx": "react-jsx"       // Enable JSX support
+  },
+  "include": ["src"]
+}
