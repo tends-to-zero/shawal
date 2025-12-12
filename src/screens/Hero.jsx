@@ -57,14 +57,14 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          className="rounded-full p-1 border-4 border-muted-foreground"
+          className="relative rounded-full p-1 border-4 border-muted-foreground w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96"
           style={{ transformOrigin: 'center' }}
         >
           <img
             src={person}
             alt="Hero Image"
             loading="eager"
-            className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover"
+            className="w-full h-full rounded-full object-cover"
           />
         </motion.div>
       </div>
