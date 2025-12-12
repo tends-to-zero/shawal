@@ -63,8 +63,6 @@ const Hero = () => {
           <img
             src={person}
             alt="Hero Image"
-            width={384}
-            height={384}
             loading="eager"
             className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover"
           />
