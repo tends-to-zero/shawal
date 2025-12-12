@@ -54,7 +54,7 @@ const Hero = () => {
           </div>
         </motion.div>
         <motion.div 
-          initial={{ opacity: 0, scale: 0.90 }}
+          initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
           className="rounded-full p-1 border-4 border-muted-foreground"
