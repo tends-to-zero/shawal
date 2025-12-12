@@ -12,12 +12,12 @@ const Hero = () => {
         transition={{ duration: 1 }}
       >
         <h1 className='text-5xl md:text-6xl lg:text-8xl mb-5 '>Solving Problems, Building Apps</h1>
-        <p className="text-xl text-muted-foreground">A 2nd-year undergrad at RUET. I'm super into competitive programming and love building web apps. Just enjoying the process of learning new tech and solving fun problems!</p>
+        <p className="text-lg md:text-xl text-muted-foreground">A 2nd-year undergrad at RUET. I'm super into competitive programming and love building web apps. Just enjoying the process of learning new tech and solving fun problems!</p>
         <div className='flex space-x-5 mt-10 items-center'>
-          <Button text = "View Projects" className="px-7 py-4 bg-foreground text-background flex justify-center items-center gap-1 group">
+          <Button text = "Projects" className="px-7 py-4 bg-foreground text-background flex justify-center items-center gap-1 group">
             <ArrowRight size={20} className='group-hover:translate-x-1.5 transition-transform'/>
           </Button>
-          <Button text = "View Projects" className="px-6 py-4 bg-foreground/5 backdrop-blur-3xl flex justify-center items-center gap-1 group border">
+          <Button text = "Resume" className="px-6 py-4 bg-foreground/5 backdrop-blur-3xl flex justify-center items-center gap-1 group border">
             <Download size={20} className='group-hover:translate-x-1.5 transition-transform'/>
           </Button>
         </div>
